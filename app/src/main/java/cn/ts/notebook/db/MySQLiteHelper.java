@@ -7,11 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.lang.reflect.Field;
 import java.util.List;
 
-import cn.ts.tscoin.tool.LogTool;
 
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
-    private static String dbName = "cn_ts_tscoin";
+    private static String dbName = "cn_ts_ts_notebook";
     private static int dbVersion = 1;
 
     private Class myClazz;
@@ -77,7 +76,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         }
         int len = sb.length();
         sb.replace(len - 2, len, ")");
-        LogTool.w("得到的语句为:" + sb.toString());
         return sb.toString();
     }
 
