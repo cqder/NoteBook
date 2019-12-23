@@ -31,7 +31,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-//        LogTool.w("myClazz != null"+(myClazz != null)+"\nclassList != null"+(classList != null));
         if (myClazz != null) {
             createTable(db, myClazz);
         }

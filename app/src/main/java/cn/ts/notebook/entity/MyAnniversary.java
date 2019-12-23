@@ -1,5 +1,8 @@
 package cn.ts.notebook.entity;
 
+/**
+ * 纪念日
+ */
 public class MyAnniversary {
 
     int id;

@@ -1,5 +1,8 @@
 package cn.ts.notebook.entity;
 
+/**
+ * 字典
+ */
 public class MyDirt {
     int id;
     String key;

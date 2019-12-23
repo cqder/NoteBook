@@ -1,5 +1,8 @@
 package cn.ts.notebook.entity;
 
+/**
+ * 便签
+ */
 public class MyNote {
 
     int id;

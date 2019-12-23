@@ -1,14 +1,20 @@
 package cn.ts.notebook;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.ts.notebook.activity.NoteDetailActivity;
 import cn.ts.notebook.db.DBManager;
 import cn.ts.notebook.entity.MyAnniversary;
 import cn.ts.notebook.entity.MyDirt;
@@ -47,4 +53,22 @@ public class MainActivity extends AppCompatActivity {
         classList.add(MyNotePlus.class);
         new DBManager(myContext, classList);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.app_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.action_add) {
+            startActivity(new Intent(MainActivity.this, NoteDetailActivity.class));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+
+    }
+
 }
